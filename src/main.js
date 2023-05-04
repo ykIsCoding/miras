@@ -15,12 +15,13 @@ import { aliases, fa } from 'vuetify/iconsets/fa'
 import { mdi } from 'vuetify/iconsets/mdi'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 
-const mirasLightTheme = {
+const light = {
         dark:false,
         colors:{
-            background: '#F2F3F8',
-            surface: '#F2F3F8',
-            primary: '#3A4069',
+            
+            background: '#F3EEFC',
+            surface: '#5818AE',
+            primary: '#5818AE',
             'primary-darken-1': '#2B304F',
             secondary: '#F38B2B',
             'secondary-darken-1': '#F38B2B',
@@ -29,6 +30,22 @@ const mirasLightTheme = {
             success: '#4CAF50',
             warning: '#FB8C00',
         }
+}
+
+const dark = {
+    dark:true,
+    colors:{
+        background: '#00ffff',
+        surface: '#00ffff',
+        primary: '#3A4069',
+        'primary-darken-1': '#2B304F',
+        secondary: '#F38B2B',
+        'secondary-darken-1': '#F38B2B',
+        error: '#B00020',
+        info: '#2196F3',
+        success: '#4CAF50',
+        warning: '#FB8C00',
+    }
 }
 
 //router para navigacion
@@ -53,9 +70,13 @@ const vtfy = createVuetify({
         }
       },
     theme: {
-        defaultTheme:'mirasLightTheme',
+        options: {
+            customProperties: true
+          },
+        defaultTheme:'light',
         themes: {
-                mirasLightTheme
+                light,
+                dark
         }
     }
 })

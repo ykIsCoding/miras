@@ -1,7 +1,5 @@
 <template>
-    <v-app>
-      <v-btn @click="toggleTheme">toggle theme</v-btn>
-    </v-app>
+   
   </template>
   
   <script setup>
@@ -10,7 +8,7 @@
     
     const toggleTheme = () => {
         console.log(theme.global.current.value)
-        return theme.global.name.value = theme.global.current.value.dark ? 'mirasLightTheme' : 'dark'
+        return theme.global.name.value = theme.global.current.value.dark ? 'mirasLightTheme' : 'mirasDarkTheme'
     }
 
   </script>

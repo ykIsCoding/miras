@@ -1,9 +1,10 @@
 <template>
     <v-card-text>
       <v-text-field
-        class="elevation-1"
+        class="elevation-1 bg-primary"
         :loading="loading"
         variant="solo"
+        
         label="Buscar"
         single-line
         hide-details
